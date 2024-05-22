@@ -17,7 +17,7 @@ func (this *Client) WithConfig(config *Config) *Client {
 	return this
 }
 
-// now only support mysql TODO:support other database by config
+// now only support mysql TODO:support other database by config hello
 func (this *Client) Open() *Client {
 	var err error
 	if !this.Config.HasDsn() {
