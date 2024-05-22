@@ -26,6 +26,7 @@ func (this *Client) Open() *Client {
 	this.Db, err = gorm.Open(mysql.Open(this.Config.Dsn), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true,
+			TablePrefix:   this.Config.TablePrefix,
 		},
 	})
 	if err != nil {
